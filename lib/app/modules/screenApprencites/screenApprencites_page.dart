@@ -27,28 +27,38 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
         color: ColorsD.transparent,
         child: Stack(
           children: [
-            ///Imagem de fundo
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Container(
-                width: 500,
-                height: 280,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      "assets/images/cmaa/background_image.png",
+            ///Cards
+            ListView(
+              children: [
+                Material(
+                  elevation: 20,
+                  child: Container(
+                    height: 125,
+                    color: ColorsD.white,
+                    child: Row(
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Modular.to.navigate("/apprencites");
+                          },
+                          child: Container(
+                            width: 280,
+                            height: 200,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  "assets/images/cmaa/main_logo.png",
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-              ),
-            ),
-
-            ///Cards
-            Padding(
-              padding: const EdgeInsets.only(top: 80),
-              child: Align(
-                alignment: Alignment.center,
-                child: Center(
+                const SizedBox(height: 20),
+                Center(
                   child: Wrap(
                     children: [
                       ///Anna Beatriz
@@ -233,39 +243,7 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
                     ],
                   ),
                 ),
-              ),
-            ),
-
-            ///Cabeçalho
-            Align(
-              alignment: Alignment.topCenter,
-              child: Material(
-                elevation: 20,
-                child: Container(
-                  height: 125,
-                  color: ColorsD.white,
-                  child: Row(
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Modular.to.navigate("/apprencites");
-                        },
-                        child: Container(
-                          width: 280,
-                          height: 200,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                "assets/images/cmaa/main_logo.png",
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              ],
             ),
 
             ///Botões
