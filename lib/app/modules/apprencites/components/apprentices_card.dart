@@ -1,28 +1,39 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:new_presentation/app/colors/defaultColors.dart';
-import 'package:new_presentation/app/modules/screenApprencites/components/expanded_card.dart';
+import 'package:new_presentation/app/modules/apprencites/components/expanded_card.dart';
 
 class ApprenticesCard extends StatelessWidget {
   String? name;
   int? age;
-  String? sector;
+  String? cpf;
+  String? telephone;
+  String? email;
   bool? active;
-  String? registration;
   DecorationImage? profileImage;
   DecorationImage? circleImage;
+  String? registration;
   String? unit;
+  String? sector;
+  String? office;
+  String? costCenterCode;
+  String? costCenter;
 
-  ApprenticesCard({
-    Key? key,
+  ApprenticesCard({ Key? key,
     this.name,
     this.age,
-    this.sector,
+    this.cpf,
+    this.telephone,
+    this.email,
     this.active,
-    this.registration,
     this.profileImage,
     this.circleImage,
+    this.registration,
     this.unit,
+    this.sector,
+    this.office,
+    this.costCenterCode,
+    this.costCenter,
   }) : super(key: key);
 
   @override
@@ -35,13 +46,22 @@ class ApprenticesCard extends StatelessWidget {
                 builder: (contextA) {
                   return AlertDialog(
                     backgroundColor: ColorsD.transparent,
+                    surfaceTintColor: ColorsD.transparent,
                     content: ExpandedCard(
                       name: name!,
                       age: age!,
-                      sector: sector!,
+                      cpf: cpf!,
+                      telephone: telephone!,
+                      email: email!,
                       active: active!,
-                      profileImage: profileImage,
-                      circleImage: circleImage,
+                      profileImage: profileImage!,
+                      circleImage: circleImage!,
+                      registration: registration!,
+                      unit: unit!,
+                      sector: sector!,
+                      office: office!,
+                      costCenterCode: costCenterCode!,
+                      costCenter: costCenter!,
                     ),
                   );
                 },
@@ -113,7 +133,7 @@ class ApprenticesCard extends StatelessWidget {
                                 name!,
                                 overflow: TextOverflow.ellipsis,
                                 style: const TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 21,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -121,13 +141,17 @@ class ApprenticesCard extends StatelessWidget {
                               Text(
                                 "Idade: $age",
                                 style: const TextStyle(
-                                    fontSize: 22, fontWeight: FontWeight.bold),
+                                  fontSize: 21,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               const SizedBox(height: 10),
                               Text(
-                                "Unidade: $unit",
+                                "Cargo: $office",
                                 style: const TextStyle(
-                                    fontSize: 22, fontWeight: FontWeight.bold),
+                                  fontSize: 21,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ],
                           ),

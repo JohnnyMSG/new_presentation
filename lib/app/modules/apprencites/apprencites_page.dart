@@ -1,27 +1,29 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:new_presentation/app/colors/defaultColors.dart';
-import 'package:new_presentation/app/modules/screenApprencites/components/apprentices_card.dart';
-import 'package:new_presentation/app/modules/screenApprencites/screenApprencites_store.dart';
+import 'package:new_presentation/app/modules/apprencites/apprencites_store.dart';
+import 'package:new_presentation/app/modules/components/main_drawer.dart';
+import 'package:new_presentation/app/modules/components/main_app_bar.dart';
 import 'package:flutter/material.dart';
 
-class ScreenApprencitesPage extends StatefulWidget {
+class ApprencitesPage extends StatefulWidget {
   final String title;
 
-  const ScreenApprencitesPage({Key? key, this.title = 'ScreenApprencitesPage'})
+  const ApprencitesPage({Key? key, this.title = 'ApprencitesPage'})
       : super(key: key);
 
   @override
-  ScreenApprencitesPageState createState() => ScreenApprencitesPageState();
+  ApprencitesPageState createState() => ApprencitesPageState();
 }
 
-class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
-  final ScreenApprencitesStore store = Modular.get();
+class ApprencitesPageState extends State<ApprencitesPage> {
+  final ApprencitesStore _store = Modular.get();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: null,
-      body: Container(
+    return const Scaffold(
+      appBar: MainAppBar(),
+      drawer: null,
+      body: MainDrawer(),
+      /*Container(
         height: double.infinity,
         width: double.infinity,
         color: ColorsD.transparent,
@@ -30,34 +32,17 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
             ///Cards
             ListView(
               children: [
-                Material(
-                  elevation: 20,
-                  child: Container(
-                    height: 125,
-                    color: ColorsD.white,
-                    child: Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Modular.to.navigate("/apprencites");
-                          },
-                          child: Container(
-                            width: 280,
-                            height: 200,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/images/cmaa/main_logo.png",
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 120),
+                  child: Text(
+                    'Aprendizes',
+                    style: TextStyle(
+                      color: ColorsD.black,
+                      fontSize: 30,
+                      fontFamily: "AspireSCRegular",
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
                 Center(
                   child: Wrap(
                     children: [
@@ -65,8 +50,9 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
                       ApprenticesCard(
                         name: "Anna Beatriz Domingos de Jesus",
                         age: 19,
-                        sector: "sla",
-                        registration: "1010621",
+                        cpf: "702.909.916-84",
+                        telephone: "(34) 99698-0784",
+                        email: "anna.beatriz@cmaa.ind.br",
                         active: true,
                         profileImage: const DecorationImage(
                           image: AssetImage(
@@ -76,15 +62,21 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
                           image: AssetImage(
                               'assets/images/apprentices_profiles/anna/circleAnna.png'),
                         ),
-                        unit: "UVT",
+                        registration: "1010621",
+                        unit: "Unidade Vale do Tijuco",
+                        sector: "sla",
+                        office: "Jovem Aprendiz",
+                        costCenterCode: "1040",
+                        costCenter: "APRENDIZES - ADMINISTRATIVO",
                       ),
 
                       ///Arthur
                       ApprenticesCard(
                         name: "Arthur Nogueira Oliveira",
                         age: 20,
-                        sector: "TI",
-                        registration: "1010619",
+                        cpf: "703.677.296-44",
+                        telephone: "(34) 98889-5106",
+                        email: "arthur.oliveira@cmaa.ind.br",
                         active: true,
                         profileImage: const DecorationImage(
                           image: AssetImage(
@@ -94,15 +86,21 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
                           image: AssetImage(
                               'assets/images/apprentices_profiles/arthur/circleArthur.png'),
                         ),
-                        unit: "UVT",
+                        registration: "1010619",
+                        unit: "Unidade Vale do Tijuco",
+                        sector: "TI",
+                        office: "Jovem Aprendiz",
+                        costCenterCode: "2140",
+                        costCenter: "APRENDIZES - AGRÍCOLA",
                       ),
 
                       ///Camila
                       ApprenticesCard(
                         name: "Camila de Lima Oliveira",
                         age: 19,
-                        sector: "sla",
-                        registration: "1010628",
+                        cpf: "147.502.126-79",
+                        telephone: "(34) 98414-5378",
+                        email: "camila.oliveira@cmaa.ind.br",
                         active: true,
                         profileImage: const DecorationImage(
                           image: AssetImage(
@@ -112,33 +110,35 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
                           image: AssetImage(
                               'assets/images/apprentices_profiles/camila/circleCamila.png'),
                         ),
-                        unit: "UVT",
+                        registration: "1010628",
+                        unit: "Unidade Vale do Tijuco",
+                        sector: "sla",
+                        office: "Jovem Aprendiz",
+                        costCenterCode: "1040",
+                        costCenter: "APRENDIZES - ADMINISTRATIVO",
                       ),
 
                       ///Carlao
                       ApprenticesCard(
                         name: "Carlos Doliveira",
                         age: 19,
-                        sector: "Sem setor",
-                        registration: "-------",
                         active: false,
-                        profileImage: const DecorationImage(
-                          image: AssetImage(
-                              'assets/images/apprentices_profiles/carlao/profileCarlao.png'),
-                        ),
                         circleImage: const DecorationImage(
                           image: AssetImage(
                               'assets/images/apprentices_profiles/carlao/circleCarlao.png'),
                         ),
-                        unit: "UVT",
+                        registration: "-------",
+                        sector: "Sem setor",
+                        office: "Jovem Aprendiz",
                       ),
 
                       ///Eduardo
                       ApprenticesCard(
                         name: "Eduardo Nascimento dos Reis",
                         age: 19,
-                        sector: "sla",
-                        registration: "1010626",
+                        cpf: "145.036.136-69",
+                        telephone: "(34) 99976-3562",
+                        email: "eduardo.nascimento@cmaa.ind.br",
                         active: true,
                         profileImage: const DecorationImage(
                           image: AssetImage(
@@ -148,33 +148,35 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
                           image: AssetImage(
                               'assets/images/apprentices_profiles/eduardo/circleEduardo.png'),
                         ),
-                        unit: "UVT",
+                        registration: "1010626",
+                        unit: "Unidade Vale do Tijuco",
+                        sector: "sla",
+                        office: "Jovem Aprendiz",
+                        costCenterCode: "2140",
+                        costCenter: "APRENDIZES - AGRÍCOLA",
                       ),
 
                       ///Filipe
                       ApprenticesCard(
                         name: "Filipe Ramos",
                         age: 19,
-                        sector: "Sem setor",
-                        registration: "-------",
                         active: false,
-                        profileImage: const DecorationImage(
-                          image: AssetImage(
-                              'assets/images/apprentices_profiles/filipe/profileFilipe.png'),
-                        ),
                         circleImage: const DecorationImage(
                           image: AssetImage(
                               'assets/images/apprentices_profiles/filipe/circleFilipe.png'),
                         ),
-                        unit: "UVT",
+                        registration: "-------",
+                        sector: "Sem setor",
+                        office: "Jovem Aprendiz",
                       ),
 
                       ///Johnny
                       ApprenticesCard(
                         name: "Johnny Marques Silva Gouveia",
                         age: 19,
-                        sector: "CIIA",
-                        registration: "1010623",
+                        cpf: "700.263.686-33",
+                        telephone: "(34) 99862-0410",
+                        email: "johnny.gouveia@cmaa.ind.br",
                         active: true,
                         profileImage: const DecorationImage(
                           image: AssetImage(
@@ -184,15 +186,21 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
                           image: AssetImage(
                               'assets/images/apprentices_profiles/johnny/circleJohnny.png'),
                         ),
-                        unit: "UVT",
+                        registration: "1010623",
+                        unit: "Unidade Vale do Tijuco",
+                        sector: "CIIA",
+                        office: "Jovem Aprendiz",
+                        costCenterCode: "2140",
+                        costCenter: "APRENDIZES - AGRÍCOLA",
                       ),
 
                       ///Larah
                       ApprenticesCard(
                         name: "Larah Bianca Barcelo Peres",
                         age: 19,
-                        sector: "sla",
-                        registration: "1010631",
+                        cpf: "706.128.666-02",
+                        telephone: "(34) 99956-2690",
+                        email: "larah.peres@cmaa.ind.br",
                         active: true,
                         profileImage: const DecorationImage(
                           image: AssetImage(
@@ -202,15 +210,21 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
                           image: AssetImage(
                               'assets/images/apprentices_profiles/larah/circleLarah.png'),
                         ),
-                        unit: "UVT",
+                        registration: "1010631",
+                        unit: "Unidade Vale do Tijuco",
+                        sector: "sla",
+                        office: "Jovem Aprendiz",
+                        costCenterCode: "2140",
+                        costCenter: "APRENDIZES - AGRÍCOLA",
                       ),
 
                       ///Lucas
                       ApprenticesCard(
                         name: "Lucas Gabriel Silva Martins",
                         age: 19,
-                        sector: "sla",
-                        registration: "1010622",
+                        cpf: "048.504.371-84",
+                        telephone: "(34) 99133-0749",
+                        email: "lucas.martins@cmaa.ind.br",
                         active: true,
                         profileImage: const DecorationImage(
                           image: AssetImage(
@@ -220,25 +234,26 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
                           image: AssetImage(
                               'assets/images/apprentices_profiles/lucas/circleLucas.png'),
                         ),
-                        unit: "UVT",
+                        registration: "1010622",
+                        unit: "Unidade Vale do Tijuco",
+                        sector: "sla",
+                        office: "Jovem Aprendiz",
+                        costCenterCode: "2140",
+                        costCenter: "APRENDIZES - AGRÍCOLA",
                       ),
 
                       ///Pedro
                       ApprenticesCard(
                         name: "Pedro Emanuel",
                         age: 19,
-                        sector: "Sem setor",
-                        registration: "-------",
                         active: false,
-                        profileImage: const DecorationImage(
-                          image: AssetImage(
-                              'assets/images/apprentices_profiles/pedro/profilePedro.png'),
-                        ),
                         circleImage: const DecorationImage(
                           image: AssetImage(
                               'assets/images/apprentices_profiles/pedro/circlePedro.png'),
                         ),
-                        unit: "UVT",
+                        registration: "-------",
+                        sector: "Sem setor",
+                        office: "Jovem Aprendiz",
                       ),
                     ],
                   ),
@@ -286,7 +301,7 @@ class ScreenApprencitesPageState extends State<ScreenApprencitesPage> {
             ),
           ],
         ),
-      ),
+      ),*/
     );
   }
 }

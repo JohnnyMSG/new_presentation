@@ -1,7 +1,10 @@
+
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:new_presentation/app/colors/defaultColors.dart';
-import 'home_store.dart';
+import 'package:new_presentation/app/modules/home/home_store.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -23,12 +26,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: InkWell(
-        onTap: () {
-          Modular.to.navigate("/apprencites");
-        },
-        child: Container(
+    return Stack(
+      children: [
+        Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
@@ -38,7 +38,23 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-      ),
+        ElevatedButton(
+          onPressed: () {
+            Modular.to.navigate("/apprencites");
+          },
+          style: const ButtonStyle(
+            surfaceTintColor: MaterialStatePropertyAll<Color>(Colors.transparent),
+            shadowColor: MaterialStatePropertyAll<Color>(Colors.transparent),
+            backgroundColor: MaterialStatePropertyAll<Color>(Colors.transparent),
+            overlayColor: MaterialStatePropertyAll<Color>(Colors.transparent),
+            foregroundColor: MaterialStatePropertyAll<Color>(Colors.transparent),
+          ),
+          child: const SizedBox(
+            width: double.infinity,
+            height: double.infinity,
+          ),
+        ),
+      ],
     );
   }
 }
