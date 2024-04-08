@@ -3,7 +3,12 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:new_presentation/app/colors/defaultColors.dart';
 
 class MainDrawer extends StatefulWidget implements PreferredSizeWidget {
-  const MainDrawer({Key? key}) : super(key: key);
+  int selectedIndex;
+
+  MainDrawer({
+    Key? key,
+    required this.selectedIndex,
+  }) : super(key: key);
 
   @override
   State<MainDrawer> createState() => _MainDrawerState();
@@ -13,8 +18,6 @@ class MainDrawer extends StatefulWidget implements PreferredSizeWidget {
 }
 
 class _MainDrawerState extends State<MainDrawer> {
-  final int _selectedIndex = 0;
-
   @override
   void initState() {
     super.initState();
@@ -27,7 +30,9 @@ class _MainDrawerState extends State<MainDrawer> {
       child: NavigationRail(
         elevation: 20,
         backgroundColor: ColorsD.white,
-        selectedIndex: _selectedIndex,
+        selectedIndex: widget.selectedIndex,
+        useIndicator: true,
+        indicatorColor: ColorsD.dark_green.withOpacity(0.7),
         onDestinationSelected: (i) {
           i == 0
               ? Modular.to.navigate("/apprencites")
@@ -35,18 +40,27 @@ class _MainDrawerState extends State<MainDrawer> {
                   ? Modular.to.navigate("/timeline")
                   : Modular.to.navigate("/rule");
         },
-        destinations: const <NavigationRailDestination>[
+        destinations: <NavigationRailDestination>[
           NavigationRailDestination(
-            icon: Icon(Icons.people_alt_sharp),
-            label: Text("Aprendizes"),
+            icon: Icon(
+              Icons.people_alt_sharp,
+              color: widget.selectedIndex == 0 ? ColorsD.white : ColorsD.black,
+            ),
+            label: const Text("Aprendizes"),
           ),
           NavigationRailDestination(
-            icon: Icon(Icons.date_range_rounded),
-            label: Text("Linha do tempo"),
+            icon: Icon(
+              Icons.date_range_rounded,
+              color: widget.selectedIndex == 1 ? ColorsD.white : ColorsD.black,
+            ),
+            label: const Text("Linha do tempo"),
           ),
           NavigationRailDestination(
-            icon: Icon(Icons.rule_sharp),
-            label: Text("Regras pela Vida"),
+            icon: Icon(
+              Icons.rule_sharp,
+              color: widget.selectedIndex == 2 ? ColorsD.white : ColorsD.black,
+            ),
+            label: const Text("Regras pela Vida"),
           ),
         ],
       ),

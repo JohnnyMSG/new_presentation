@@ -5,7 +5,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 class TimelineModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => TimelineStore()),
+    Bind.factory((i) => TimelineStore()),
   ];
 
   @override
