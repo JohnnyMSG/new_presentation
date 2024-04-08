@@ -13,7 +13,7 @@ class MainDrawer extends StatefulWidget implements PreferredSizeWidget {
 }
 
 class _MainDrawerState extends State<MainDrawer> {
-  int _selectedIndex = 1;
+  final int _selectedIndex = 0;
 
   @override
   void initState() {
@@ -29,20 +29,24 @@ class _MainDrawerState extends State<MainDrawer> {
         backgroundColor: ColorsD.white,
         selectedIndex: _selectedIndex,
         onDestinationSelected: (i) {
-          i == 0 ? Modular.to.navigate("/apprencites") : Modular.to.navigate("/fff");
+          i == 0
+              ? Modular.to.navigate("/apprencites")
+              : i == 1
+                  ? Modular.to.navigate("/timeline")
+                  : Modular.to.navigate("/rule");
         },
         destinations: const <NavigationRailDestination>[
           NavigationRailDestination(
             icon: Icon(Icons.people_alt_sharp),
-            label: Text("One"),
+            label: Text("Aprendizes"),
           ),
           NavigationRailDestination(
             icon: Icon(Icons.date_range_rounded),
-            label: Text("Two"),
+            label: Text("Linha do tempo"),
           ),
           NavigationRailDestination(
             icon: Icon(Icons.rule_sharp),
-            label: Text("Tree"),
+            label: Text("Regras pela Vida"),
           ),
         ],
       ),
