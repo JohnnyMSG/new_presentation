@@ -7,6 +7,6 @@ class PresentationModule extends Module {
   final List<Bind> binds = [Bind.lazySingleton((i) => PresentationStore()),];
 
   @override
-  final List<ModularRoute> routes = [ChildRoute('/', child: (_, args) => PresentationPage()),];
+  final List<ModularRoute> routes = [ChildRoute('/presentation', child: (_, args) => PresentationPage()),];
 
 }

@@ -38,7 +38,9 @@ class _MainDrawerState extends State<MainDrawer> {
               ? Modular.to.navigate("/apprencites")
               : i == 1
                   ? Modular.to.navigate("/timeline")
-                  : Modular.to.navigate("/rule");
+                  : i == 2
+                      ? Modular.to.navigate("/rule")
+                      : Modular.to.navigate("/presentation");
         },
         destinations: <NavigationRailDestination>[
           NavigationRailDestination(
@@ -61,6 +63,13 @@ class _MainDrawerState extends State<MainDrawer> {
               color: widget.selectedIndex == 2 ? ColorsD.white : ColorsD.black,
             ),
             label: const Text("Regras pela Vida"),
+          ),
+          NavigationRailDestination(
+            icon: Icon(
+              Icons.airplay,
+              color: widget.selectedIndex == 3 ? ColorsD.white : ColorsD.black,
+            ),
+            label: const Text("Apresentação"),
           ),
         ],
       ),

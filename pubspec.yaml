@@ -25,6 +25,7 @@ dev_dependencies:
 
   flutter_lints: ^2.0.0
   mobx_codegen: ^2.1.1
+  webview_universal: ^0.0.5
   #triple_test: ^2.0.0
   #modular_test: ^3.0.1
 
@@ -68,6 +69,7 @@ flutter:
     - assets/images/cmaa/image_home.png
     - assets/images/cmaa/cmaa.png
     - assets/images/cmaa/regrasPelaVida/
+    - assets/images/cmaa/presentation/
 
   fonts:
     - family: AspireSCRegular
