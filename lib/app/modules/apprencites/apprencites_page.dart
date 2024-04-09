@@ -16,7 +16,7 @@ class ApprencitesPage extends StatefulWidget {
 }
 
 class ApprencitesPageState extends State<ApprencitesPage> {
-  final ApprencitesStore _store = Modular.get();
+  //final ApprencitesStore _store = Modular.get();
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,8 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                           style: TextStyle(
                             color: ColorsD.black,
                             fontSize: 30,
-                            fontFamily: "AspireSCRegular",
+                            fontFamily: "Calibri",
+                            fontWeight: FontWeight.w100,
                           ),
                         ),
                       ),
@@ -71,7 +72,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               costCenterCode: "1040",
                               costCenter: "APRENDIZES - ADMINISTRATIVO",
                             ),
-            
+
                             ///Arthur
                             ApprenticesCard(
                               name: "Arthur Nogueira Oliveira",
@@ -93,7 +94,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               costCenterCode: "2140",
                               costCenter: "APRENDIZES - AGRÍCOLA",
                             ),
-            
+
                             ///Camila
                             ApprenticesCard(
                               name: "Camila de Lima Oliveira",
@@ -115,7 +116,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               costCenterCode: "1040",
                               costCenter: "APRENDIZES - ADMINISTRATIVO",
                             ),
-            
+
                             ///Carlao
                             ApprenticesCard(
                               name: "Carlos Doliveira",
@@ -128,7 +129,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               sector: "Sem setor",
                               office: "Jovem Aprendiz",
                             ),
-            
+
                             ///Eduardo
                             ApprenticesCard(
                               name: "Eduardo Nascimento dos Reis",
@@ -150,7 +151,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               costCenterCode: "2140",
                               costCenter: "APRENDIZES - AGRÍCOLA",
                             ),
-            
+
                             ///Filipe
                             ApprenticesCard(
                               name: "Filipe Ramos",
@@ -163,7 +164,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               sector: "Sem setor",
                               office: "Jovem Aprendiz",
                             ),
-            
+
                             ///Johnny
                             ApprenticesCard(
                               name: "Johnny Marques Silva Gouveia",
@@ -185,7 +186,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               costCenterCode: "2140",
                               costCenter: "APRENDIZES - AGRÍCOLA",
                             ),
-            
+
                             ///Larah
                             ApprenticesCard(
                               name: "Larah Bianca Barcelo Peres",
@@ -207,7 +208,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               costCenterCode: "2140",
                               costCenter: "APRENDIZES - AGRÍCOLA",
                             ),
-            
+
                             ///Lucas
                             ApprenticesCard(
                               name: "Lucas Gabriel Silva Martins",
@@ -229,7 +230,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               costCenterCode: "2140",
                               costCenter: "APRENDIZES - AGRÍCOLA",
                             ),
-            
+
                             ///Pedro
                             ApprenticesCard(
                               name: "Pedro Emanuel",
@@ -247,7 +248,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                       ),
                     ],
                   ),
-            
+
                   ///Botões
                   Padding(
                     padding: const EdgeInsets.all(10),

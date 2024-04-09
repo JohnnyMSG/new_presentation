@@ -67,6 +67,7 @@ flutter:
     - assets/images/cmaa/background_image.png
     - assets/images/cmaa/image_home.png
     - assets/images/cmaa/cmaa.png
+    - assets/images/cmaa/regrasPelaVida/
 
   fonts:
     - family: AspireSCRegular
