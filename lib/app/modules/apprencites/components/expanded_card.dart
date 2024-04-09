@@ -47,12 +47,12 @@ class ExpandedCard extends StatelessWidget {
       children: [
         Container(
           width: 20,
-          height: 570,
+          height: 560,
           color: ColorsD.dark_green,
         ),
         Container(
-          width: 1250,
-          height: 570,
+          height: 560,
+          width: 920,
           decoration: const BoxDecoration(
             color: ColorsD.white,
             borderRadius: BorderRadius.only(
@@ -83,14 +83,15 @@ class ExpandedCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 35),
+                    const SizedBox(width: 15),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
+                      mainAxisSize: MainAxisSize.max,
                       children: [
+                        ///Matrícula
                         Container(
-                          width: 840,
+                          width: 530,
                           height: 60,
                           color: ColorsD.dark_green,
                           child: Center(
@@ -103,85 +104,39 @@ class ExpandedCard extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 25),
-                        SizedBox(
-                          width: 823,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                name!,
-                                style: const TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  const Text(
-                                    "Idade: ",
-                                    style: TextStyle(
-                                      fontSize: 28,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    "$age",
-                                    style: const TextStyle(
-                                      fontSize: 28,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                        const SizedBox(height: 15),
+
+                        ///Nome
+                        Text(
+                          name!,
+                          style: const TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         const SizedBox(height: 15),
-                        SizedBox(
-                          width: 823,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Row(
-                                children: [
-                                  const Text(
-                                    "CPF: ",
-                                    style: TextStyle(
-                                      fontSize: 28,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    cpf!,
-                                    style: const TextStyle(
-                                      fontSize: 28,
-                                    ),
-                                  ),
-                                ],
+
+                        ///Telefone
+                        Row(
+                          children: [
+                            const Text(
+                              "Telefone: ",
+                              style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
                               ),
-                              Row(
-                                children: [
-                                  const Text(
-                                    "Telefone: ",
-                                    style: TextStyle(
-                                      fontSize: 28,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    telephone!,
-                                    style: const TextStyle(
-                                      fontSize: 28,
-                                    ),
-                                  ),
-                                ],
+                            ),
+                            Text(
+                              telephone!,
+                              style: const TextStyle(
+                                fontSize: 28,
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                         const SizedBox(height: 15),
+
+                        ///Email
                         Row(
                           children: [
                             const Text(
@@ -199,113 +154,125 @@ class ExpandedCard extends StatelessWidget {
                             ),
                           ],
                         ),
-                        /*const SizedBox(height: 43),
-                        Container(
-                          width: 840,
-                          height: 5,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: ColorsD.dark_green,
-                          ),
-                        )*/
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 20),
-                Container(
-                  height: 60,
-                  color: ColorsD.dark_green,
-                  child: const Center(
-                    child: Text(
-                      "Informações gerais",
-                      style: TextStyle(
-                        color: ColorsD.white,
-                        fontSize: 40,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 25),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        const Text(
-                          "Unidade: ",
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          "$unit",
-                          style: const TextStyle(
-                            fontSize: 28,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Setor: ",
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          sector!,
-                          style: const TextStyle(
-                            fontSize: 28,
-                          ),
+                        const SizedBox(height: 15),
+
+                        ///Idade
+                        Row(
+                          children: [
+                            const Text(
+                              "Idade: ",
+                              style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "$age",
+                              style: const TextStyle(
+                                fontSize: 28,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
                   ],
                 ),
                 const SizedBox(height: 15),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        const Text(
-                          "Centro de Custo: ",
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          "$costCenter",
-                          style: const TextStyle(
-                            fontSize: 28,
-                          ),
-                        ),
-                      ],
+
+                ///Informações gerais
+                Container(
+
+                  color: ColorsD.dark_green,
+                  child: const Center(
+                    child: Text(
+                      "Informações gerais",
+                      style: TextStyle(
+                        color: ColorsD.white,
+                        fontSize: 30,
+                      ),
                     ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Código: ",
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          costCenterCode!,
-                          style: const TextStyle(
-                            fontSize: 28,
-                          ),
-                        ),
-                      ],
+                  ),
+                ),
+                const SizedBox(height: 15),
+
+                ///Unidade
+                Row(
+                  children: [
+                    const Text(
+                      "Unidade: ",
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "$unit",
+                      style: const TextStyle(
+                        fontSize: 28,
+                      ),
                     ),
                   ],
                 ),
+                const SizedBox(height: 15),
+
+                ///Setor
+                Row(
+                  children: [
+                    const Text(
+                      "Setor: ",
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      sector!,
+                      style: const TextStyle(
+                        fontSize: 28,
+                      ),
+                    ),
+                  ],
+                ),
+
+                /*///Centro de Custo
+                Row(
+                  children: [
+                    const Text(
+                      "Centro de Custo: ",
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "$costCenter",
+                      style: const TextStyle(
+                        fontSize: 28,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 15),
+
+                ///Código
+                Row(
+                  children: [
+                    const Text(
+                      "Código: ",
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      costCenterCode!,
+                      style: const TextStyle(
+                        fontSize: 28,
+                      ),
+                    ),
+                  ],
+                ),*/
               ],
             ),
           ),

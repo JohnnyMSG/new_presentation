@@ -38,41 +38,41 @@ class ApprenticesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: active!
-          ? () {
-              showDialog(
-                context: context,
-                builder: (contextA) {
-                  return AlertDialog(
-                    backgroundColor: ColorsD.transparent,
-                    surfaceTintColor: ColorsD.transparent,
-                    content: ExpandedCard(
-                      name: name!,
-                      age: age!,
-                      cpf: cpf!,
-                      telephone: telephone!,
-                      email: email!,
-                      active: active!,
-                      profileImage: profileImage!,
-                      circleImage: circleImage!,
-                      registration: registration!,
-                      unit: unit!,
-                      sector: sector!,
-                      office: office!,
-                      costCenterCode: costCenterCode!,
-                      costCenter: costCenter!,
-                    ),
-                  );
-                },
-              );
-            }
-          : null,
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Material(
-          elevation: 20,
-          borderRadius: BorderRadius.circular(5),
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: Material(
+        elevation: 20,
+        borderRadius: BorderRadius.circular(5),
+        child: InkWell(
+          onTap: active!
+              ? () {
+            showDialog(
+              context: context,
+              builder: (contextA) {
+                return AlertDialog(
+                  backgroundColor: ColorsD.transparent,
+                  surfaceTintColor: ColorsD.transparent,
+                  content: ExpandedCard(
+                    name: name!,
+                    age: age!,
+                    cpf: cpf!,
+                    telephone: telephone!,
+                    email: email!,
+                    active: active!,
+                    profileImage: profileImage!,
+                    circleImage: circleImage!,
+                    registration: registration!,
+                    unit: unit!,
+                    sector: sector!,
+                    office: office!,
+                    costCenterCode: costCenterCode!,
+                    costCenter: costCenter!,
+                  ),
+                );
+              },
+            );
+          }
+              : null,
           child: Container(
             width: 350,
             height: 200,
