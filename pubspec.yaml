@@ -26,6 +26,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   mobx_codegen: ^2.1.1
   webview_universal: ^0.0.5
+  flutter_widget_from_html: ^0.14.11
   #triple_test: ^2.0.0
   #modular_test: ^3.0.1
 

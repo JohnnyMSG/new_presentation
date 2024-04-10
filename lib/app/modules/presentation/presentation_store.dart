@@ -8,6 +8,14 @@ part 'presentation_store.g.dart';
 class PresentationStore = _PresentationStoreBase with _$PresentationStore;
 abstract class _PresentationStoreBase with Store {
 
+  @observable
+  bool fullScreen = false;
+
+  @action
+  void isFullScreen() {
+    fullScreen = !fullScreen;
+  }
+
   WebViewController webViewController = WebViewController();
 
   Future<void> webView(BuildContext context, Function(void Function()) setState, String link) async {
