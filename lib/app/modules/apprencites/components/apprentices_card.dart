@@ -11,7 +11,6 @@ class ApprenticesCard extends StatelessWidget {
   String? email;
   bool? active;
   DecorationImage? profileImage;
-  DecorationImage? circleImage;
   String? registration;
   String? unit;
   String? sector;
@@ -27,7 +26,6 @@ class ApprenticesCard extends StatelessWidget {
     this.email,
     this.active,
     this.profileImage,
-    this.circleImage,
     this.registration,
     this.unit,
     this.sector,
@@ -42,7 +40,7 @@ class ApprenticesCard extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: Material(
         elevation: 20,
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(20),
         child: InkWell(
           onTap: active!
               ? () {
@@ -60,7 +58,6 @@ class ApprenticesCard extends StatelessWidget {
                     email: email!,
                     active: active!,
                     profileImage: profileImage!,
-                    circleImage: circleImage!,
                     registration: registration!,
                     unit: unit!,
                     sector: sector!,
@@ -78,7 +75,7 @@ class ApprenticesCard extends StatelessWidget {
             height: 200,
             decoration: BoxDecoration(
               color: ColorsD.white,
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(20),
             ),
             child: Stack(
               children: [
@@ -168,7 +165,8 @@ class ApprenticesCard extends StatelessWidget {
                       width: 85,
                       height: 85,
                       decoration: BoxDecoration(
-                        image: circleImage,
+                        image: profileImage,
+                        shape: BoxShape.circle,
                       ),
                     ),
                   ),

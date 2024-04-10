@@ -62,12 +62,9 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               profileImage: const DecorationImage(
                                 image: AssetImage('assets/images/apprentices_profiles/anna/profileAnna.png'),
                               ),
-                              circleImage: const DecorationImage(
-                                image: AssetImage('assets/images/apprentices_profiles/anna/circleAnna.png'),
-                              ),
                               registration: "1010621",
                               unit: "Unidade Vale do Tijuco",
-                              sector: "sla",
+                              sector: "Gestão da Qualidade",
                               office: "Jovem Aprendiz",
                               costCenterCode: "1040",
                               costCenter: "APRENDIZES - ADMINISTRATIVO",
@@ -84,12 +81,9 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               profileImage: const DecorationImage(
                                 image: AssetImage('assets/images/apprentices_profiles/arthur/profileArthur.png'),
                               ),
-                              circleImage: const DecorationImage(
-                                image: AssetImage('assets/images/apprentices_profiles/arthur/circleArthur.png'),
-                              ),
                               registration: "1010619",
                               unit: "Unidade Vale do Tijuco",
-                              sector: "TI",
+                              sector: "Tecnologia da Informação",
                               office: "Jovem Aprendiz",
                               costCenterCode: "2140",
                               costCenter: "APRENDIZES - AGRÍCOLA",
@@ -98,7 +92,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                             ///Camila
                             ApprenticesCard(
                               name: "Camila de Lima Oliveira",
-                              age: 19,
+                              age: 22,
                               cpf: "147.502.126-79",
                               telephone: "(34) 98414-5378",
                               email: "camila.oliveira@cmaa.ind.br",
@@ -106,12 +100,9 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               profileImage: const DecorationImage(
                                 image: AssetImage('assets/images/apprentices_profiles/camila/profileCamila.png'),
                               ),
-                              circleImage: const DecorationImage(
-                                image: AssetImage('assets/images/apprentices_profiles/camila/circleCamila.png'),
-                              ),
                               registration: "1010628",
                               unit: "Unidade Vale do Tijuco",
-                              sector: "sla",
+                              sector: "Controle Agrícola - Colheita",
                               office: "Jovem Aprendiz",
                               costCenterCode: "1040",
                               costCenter: "APRENDIZES - ADMINISTRATIVO",
@@ -120,10 +111,9 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                             ///Carlao
                             ApprenticesCard(
                               name: "Carlos Doliveira",
-                              age: 19,
                               active: false,
-                              circleImage: const DecorationImage(
-                                image: AssetImage('assets/images/apprentices_profiles/carlao/circleCarlao.png'),
+                              profileImage: const DecorationImage(
+                                image: AssetImage('assets/images/apprentices_profiles/carlao/profileCarlao.png'),
                               ),
                               registration: "-------",
                               sector: "Sem setor",
@@ -141,12 +131,9 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               profileImage: const DecorationImage(
                                 image: AssetImage('assets/images/apprentices_profiles/eduardo/profileEduardo.png'),
                               ),
-                              circleImage: const DecorationImage(
-                                image: AssetImage('assets/images/apprentices_profiles/eduardo/circleEduardo.png'),
-                              ),
                               registration: "1010626",
                               unit: "Unidade Vale do Tijuco",
-                              sector: "sla",
+                              sector: "Planejamento e Controle de Manutenção Industrial",
                               office: "Jovem Aprendiz",
                               costCenterCode: "2140",
                               costCenter: "APRENDIZES - AGRÍCOLA",
@@ -157,8 +144,8 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               name: "Filipe Ramos",
                               age: 19,
                               active: false,
-                              circleImage: const DecorationImage(
-                                image: AssetImage('assets/images/apprentices_profiles/filipe/circleFilipe.png'),
+                              profileImage: const DecorationImage(
+                                image: AssetImage('assets/images/apprentices_profiles/filipe/profileFilipe.png'),
                               ),
                               registration: "-------",
                               sector: "Sem setor",
@@ -176,12 +163,9 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               profileImage: const DecorationImage(
                                 image: AssetImage('assets/images/apprentices_profiles/johnny/profileJohnny.png'),
                               ),
-                              circleImage: const DecorationImage(
-                                image: AssetImage('assets/images/apprentices_profiles/johnny/circleJohnny.png'),
-                              ),
                               registration: "1010623",
                               unit: "Unidade Vale do Tijuco",
-                              sector: "CIIA",
+                              sector: "Controle Integrado de Inteligência Agrícola",
                               office: "Jovem Aprendiz",
                               costCenterCode: "2140",
                               costCenter: "APRENDIZES - AGRÍCOLA",
@@ -190,20 +174,19 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                             ///Larah
                             ApprenticesCard(
                               name: "Larah Bianca Barcelo Peres",
-                              age: 19,
+                              age: 21,
                               cpf: "706.128.666-02",
                               telephone: "(34) 99956-2690",
                               email: "larah.peres@cmaa.ind.br",
                               active: true,
                               profileImage: const DecorationImage(
-                                image: AssetImage('assets/images/apprentices_profiles/larah/profileLarah.png'),
-                              ),
-                              circleImage: const DecorationImage(
-                                image: AssetImage('assets/images/apprentices_profiles/larah/circleLarah.png'),
+                                image: AssetImage(
+                                  'assets/images/apprentices_profiles/larah/profileLarah.png',
+                                ),
                               ),
                               registration: "1010631",
                               unit: "Unidade Vale do Tijuco",
-                              sector: "sla",
+                              sector: "Planejamento e Controle de Manutenção Industrial",
                               office: "Jovem Aprendiz",
                               costCenterCode: "2140",
                               costCenter: "APRENDIZES - AGRÍCOLA",
@@ -220,12 +203,9 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               profileImage: const DecorationImage(
                                 image: AssetImage('assets/images/apprentices_profiles/lucas/profileLucas.png'),
                               ),
-                              circleImage: const DecorationImage(
-                                image: AssetImage('assets/images/apprentices_profiles/lucas/circleLucas.png'),
-                              ),
                               registration: "1010622",
                               unit: "Unidade Vale do Tijuco",
-                              sector: "sla",
+                              sector: "Projetos",
                               office: "Jovem Aprendiz",
                               costCenterCode: "2140",
                               costCenter: "APRENDIZES - AGRÍCOLA",
@@ -236,8 +216,8 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                               name: "Pedro Emanuel",
                               age: 19,
                               active: false,
-                              circleImage: const DecorationImage(
-                                image: AssetImage('assets/images/apprentices_profiles/pedro/circlePedro.png'),
+                              profileImage: const DecorationImage(
+                                image: AssetImage('assets/images/apprentices_profiles/pedro/profilePedro.png'),
                               ),
                               registration: "-------",
                               sector: "Sem setor",
@@ -247,43 +227,6 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                         ),
                       ),
                     ],
-                  ),
-
-                  ///Botões
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Align(
-                      alignment: Alignment.bottomRight,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Modular.to.navigate("/");
-                        },
-                        style: ButtonStyle(
-                          padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
-                          backgroundColor: MaterialStateProperty.all(ColorsD.transparent),
-                          shadowColor: MaterialStateProperty.all(ColorsD.transparent),
-                          overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
-                            if (states.contains(MaterialState.pressed)) {
-                              return ColorsD.white_grey;
-                            }
-                            return null; // <-- Splash color
-                          }),
-                        ),
-                        child: Container(
-                          width: 90,
-                          height: 60,
-                          decoration: BoxDecoration(
-                            color: ColorsD.red,
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          child: const Icon(
-                            Icons.close,
-                            color: ColorsD.white,
-                            size: 30,
-                          ),
-                        ),
-                      ),
-                    ),
                   ),
                 ],
               ),

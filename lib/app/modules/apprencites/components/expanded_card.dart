@@ -12,7 +12,6 @@ class ExpandedCard extends StatelessWidget {
   String? email;
   bool? active;
   DecorationImage? profileImage;
-  DecorationImage? circleImage;
   String? registration;
   String? unit;
   String? sector;
@@ -29,7 +28,6 @@ class ExpandedCard extends StatelessWidget {
         this.email,
         this.active,
         this.profileImage,
-        this.circleImage,
         this.registration,
         this.unit,
         this.sector,

@@ -35,39 +35,17 @@ flutter:
 
   assets:
     - assets/images/apprentices_profiles/anna/profileAnna.png
-    - assets/images/apprentices_profiles/anna/circleAnna.png
-
     - assets/images/apprentices_profiles/arthur/profileArthur.png
-    - assets/images/apprentices_profiles/arthur/circleArthur.png
-
     - assets/images/apprentices_profiles/camila/profileCamila.png
-    - assets/images/apprentices_profiles/camila/circleCamila.png
-
     - assets/images/apprentices_profiles/carlao/profileCarlao.png
-    - assets/images/apprentices_profiles/carlao/circleCarlao.png
-
     - assets/images/apprentices_profiles/eduardo/profileEduardo.png
-    - assets/images/apprentices_profiles/eduardo/circleEduardo.png
-
     - assets/images/apprentices_profiles/filipe/profileFilipe.png
-    - assets/images/apprentices_profiles/filipe/circleFilipe.png
-
     - assets/images/apprentices_profiles/johnny/profileJohnny.png
-    - assets/images/apprentices_profiles/johnny/circleJohnny.png
-
     - assets/images/apprentices_profiles/larah/profileLarah.png
-    - assets/images/apprentices_profiles/larah/circleLarah.png
-
     - assets/images/apprentices_profiles/lucas/profileLucas.png
-    - assets/images/apprentices_profiles/lucas/circleLucas.png
-
     - assets/images/apprentices_profiles/pedro/profilePedro.png
-    - assets/images/apprentices_profiles/pedro/circlePedro.png
 
-    - assets/images/cmaa/main_logo.png
-    - assets/images/cmaa/background_image.png
-    - assets/images/cmaa/image_home.png
-    - assets/images/cmaa/cmaa.png
+    - assets/images/cmaa/
     - assets/images/cmaa/regrasPelaVida/
     - assets/images/cmaa/presentation/
     - assets/images/cmaa/timeline/apprencites/
