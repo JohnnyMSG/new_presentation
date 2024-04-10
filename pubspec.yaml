@@ -70,6 +70,10 @@ flutter:
     - assets/images/cmaa/cmaa.png
     - assets/images/cmaa/regrasPelaVida/
     - assets/images/cmaa/presentation/
+    - assets/images/cmaa/timeline/apprencites/
+    - assets/images/cmaa/timeline/programmer/
+    - assets/images/cmaa/timeline/technician/
+    - assets/images/cmaa/timeline/tester/
 
   fonts:
     - family: AspireSCRegular

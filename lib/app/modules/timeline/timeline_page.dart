@@ -2,7 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:new_presentation/app/colors/defaultColors.dart';
 import 'package:new_presentation/app/modules/components/main_app_bar.dart';
 import 'package:new_presentation/app/modules/components/main_drawer.dart';
-import 'package:new_presentation/app/modules/timeline/components/month.dart';
+import 'package:new_presentation/app/modules/timeline/components/time.dart';
 import 'package:new_presentation/app/modules/timeline/timeline_store.dart';
 import 'package:flutter/material.dart';
 
@@ -17,8 +17,8 @@ class TimelinePage extends StatefulWidget {
 
 class TimelinePageState extends State<TimelinePage> {
   final TimelineStore store = Modular.get();
-  double _xOffset = -1100;
-  double _yOffset = -450;
+  double _xOffset = -930;
+  double _yOffset = -240;
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +42,8 @@ class TimelinePageState extends State<TimelinePage> {
                     left: _xOffset,
                     top: _yOffset,
                     child: Container(
-                      width: MediaQuery.of(context).size.width * 5,
-                      height: MediaQuery.of(context).size.height * 5,
+                      width: MediaQuery.of(context).size.width * 3,
+                      height: MediaQuery.of(context).size.height * 3,
                       decoration: BoxDecoration(
                         color: ColorsD.transparent,
                         border: Border.all(
@@ -51,60 +51,99 @@ class TimelinePageState extends State<TimelinePage> {
                           width: 2.0,
                         ),
                       ),
-                      child: Row(
+                      child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Month(
-                            month: "Dezembro - 2022",
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Time(
+                                tittle: "Aprendiz",
+                                imagesPaths: const [
+                                  'assets/images/cmaa/timeline/apprencites/1.png',
+                                  'assets/images/cmaa/timeline/apprencites/2.png',
+                                  'assets/images/cmaa/timeline/apprencites/3.png',
+                                  'assets/images/cmaa/timeline/apprencites/4.png',
+                                  'assets/images/cmaa/timeline/apprencites/5.png',
+                                  'assets/images/cmaa/timeline/apprencites/6.png',
+                                  'assets/images/cmaa/timeline/apprencites/7.png',
+                                  'assets/images/cmaa/timeline/apprencites/8.png',
+                                  'assets/images/cmaa/timeline/apprencites/9.png',
+                                  'assets/images/cmaa/timeline/apprencites/10.png',
+                                ],
+                              ),
+                              Container(
+                                width: 700,
+                                height: 5,
+                                color: ColorsD.black,
+                              ),
+                              Time(
+                                tittle: "Testador",
+                                imagesPaths: const [
+                                  'assets/images/cmaa/timeline/tester/5.png',
+                                  'assets/images/cmaa/timeline/tester/6.png',
+                                  'assets/images/cmaa/timeline/tester/7.png',
+                                  'assets/images/cmaa/timeline/tester/8.png',
+                                  'assets/images/cmaa/timeline/tester/9.png',
+                                  'assets/images/cmaa/timeline/tester/10.png',
+                                ],
+                              ),
+                            ],
                           ),
-                          Month(
-                            month: "Janeiro - 2023",
-                          ),
-                          Month(
-                            month: "Fevereiro - 2023",
-                          ),
-                          Month(
-                            month: "Março - 2023",
-                          ),
-                          Month(
-                            month: "Abril - 2023",
-                          ),
-                          Month(
-                            month: "Maio - 2023",
-                          ),
-                          Month(
-                            month: "Junho - 2023",
-                          ),
-                          Month(
-                            month: "Julho - 2023",
-                          ),
-                          Month(
-                            month: "Agosto - 2023",
-                          ),
-                          Month(
-                            month: "Setembro - 2023",
-                          ),
-                          Month(
-                            month: "Outubro - 2023",
-                          ),
-                          Month(
-                            month: "Novembro - 2023",
-                          ),
-                          Month(
-                            month: "Dezembro - 2023",
-                          ),
-                          Month(
-                            month: "Janeiro - 2024",
-                          ),
-                          Month(
-                            month: "Fevereiro - 2024",
-                          ),
-                          Month(
-                            month: "Março - 2024",
-                          ),
-                          Month(
-                            month: "Abril - 2024",
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 5,
+                                  height: 500,
+                                  color: ColorsD.black,
+                                ),
+                                const SizedBox(width: 1050),
+                                Container(
+                                  width: 5,
+                                  height: 500,
+                                  color: ColorsD.black,
+                                ),
+                              ]),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Time(
+                                tittle: "Programador",
+                                imagesPaths: const [
+                                  'assets/images/cmaa/timeline/programmer/1.png',
+                                  'assets/images/cmaa/timeline/programmer/2.png',
+                                  'assets/images/cmaa/timeline/programmer/3.png',
+                                  'assets/images/cmaa/timeline/programmer/4.png',
+                                  'assets/images/cmaa/timeline/programmer/5.png',
+                                  'assets/images/cmaa/timeline/programmer/6.png',
+                                  'assets/images/cmaa/timeline/programmer/7.png',
+                                  'assets/images/cmaa/timeline/programmer/8.png',
+                                  'assets/images/cmaa/timeline/programmer/9.png',
+                                  'assets/images/cmaa/timeline/programmer/10.png',
+                                ],
+                              ),
+                              Container(
+                                width: 700,
+                                height: 5,
+                                color: ColorsD.black,
+                              ),
+                              Time(
+                                tittle: "Técnico",
+                                imagesPaths: const [
+                                  'assets/images/cmaa/timeline/technician/1.png',
+                                  'assets/images/cmaa/timeline/technician/2.png',
+                                  'assets/images/cmaa/timeline/technician/3.png',
+                                  'assets/images/cmaa/timeline/technician/4.png',
+                                  'assets/images/cmaa/timeline/technician/5.png',
+                                  'assets/images/cmaa/timeline/technician/6.png',
+                                ],
+                              ),
+                            ],
                           ),
                         ],
                       ),
