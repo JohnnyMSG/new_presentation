@@ -44,7 +44,8 @@ class RulesPageState extends State<RulesPage> {
                         ),
                       ),
 
-                      Center(
+                      Align(
+                        alignment: Alignment.center,
                         child: Wrap(
                           children: [
                             RuleLife(
@@ -58,6 +59,7 @@ class RulesPageState extends State<RulesPage> {
                                 ),
                               ),
                               tittle: 'Atender permissão de trabalho',
+                              message: "Quem arrisca, não previne",
                             ),
 
                             RuleLife(
@@ -71,6 +73,7 @@ class RulesPageState extends State<RulesPage> {
                                 ),
                               ),
                               tittle: 'Utilizar todos os EPIs',
+                              message: "Quem é vivo sempre se protege",
                             ),
 
                             RuleLife(
@@ -84,6 +87,7 @@ class RulesPageState extends State<RulesPage> {
                                 ),
                               ),
                               tittle: 'Bloquear energias perigosas',
+                              message: "Eu dou block em energias perigosas",
                             ),
 
                             RuleLife(
@@ -97,6 +101,7 @@ class RulesPageState extends State<RulesPage> {
                                 ),
                               ),
                               tittle: 'Trabalhar seguro em altura e espaço confinado',
+                              message: "Quanto maior o risco, maior a atenção",
                             ),
 
                             RuleLife(
@@ -110,6 +115,7 @@ class RulesPageState extends State<RulesPage> {
                                 ),
                               ),
                               tittle: 'Dirigir de forma segura',
+                              message: "A pressa é inimiga da segurança",
                             ),
 
                             RuleLife(
@@ -123,6 +129,7 @@ class RulesPageState extends State<RulesPage> {
                                 ),
                               ),
                               tittle: 'Prevenir os incêndios',
+                              message: "Onde não há fumaça, há atenção",
                             ),
 
                             RuleLife(
@@ -136,6 +143,7 @@ class RulesPageState extends State<RulesPage> {
                                 ),
                               ),
                               tittle: 'Comunicar todos os acidentes',
+                              message: "Quem cala, consente com o acidente",
                             ),
                           ],
                         ),

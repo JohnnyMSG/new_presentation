@@ -6,5 +6,10 @@ class RulesStore = _RulesStoreBase with _$RulesStore;
 abstract class _RulesStoreBase with Store {
 
   @observable
-  bool expanded = false;
+  bool isExpanded = false;
+
+  @action
+  void expanded() {
+    isExpanded = !isExpanded;
+  }
 }

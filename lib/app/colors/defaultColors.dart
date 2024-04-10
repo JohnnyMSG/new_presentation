@@ -24,7 +24,7 @@ class ColorsD {
   static const Color dark_green_light = Color(0xff79b49b);
 
   ///Verde light
-  static const Color dark_green_more_ight = Color(0xffD0E2B2);
+  static const Color dark_green_more_light = Color(0xffD0E2B2);
 
   ///Verde médio
   static const Color medium_green = Color(0xffAFD46C);
