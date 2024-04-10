@@ -87,7 +87,7 @@ class ApprenticesCard extends StatelessWidget {
                           height: 200,
                           decoration: BoxDecoration(
                             color: ColorsD.black_grey.withOpacity(0.5),
-                            borderRadius: BorderRadius.circular(5),
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       )

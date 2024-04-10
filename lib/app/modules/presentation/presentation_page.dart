@@ -67,16 +67,19 @@ class PresentationPageState extends State<PresentationPage> {
                   ),
                   child: Observer(
                     builder: (context) {
-                      return Container(
-                        height: 50,
-                        width: 100,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          color: ColorsD.medium_blue,
-                        ),
-                        child: Icon(
-                          !_store.fullScreen ? Icons.fullscreen : Icons.fullscreen_exit_sharp,
-                          color: ColorsD.white,
+                      return Tooltip(
+                        message: !_store.fullScreen ? "Tela cheia" : "Tirar tela cheia",
+                        child: Container(
+                          height: 50,
+                          width: 100,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: ColorsD.dark_green.withOpacity(0.8),
+                          ),
+                          child: Icon(
+                            !_store.fullScreen ? Icons.fullscreen : Icons.fullscreen_exit_sharp,
+                            color: ColorsD.white,
+                          ),
                         ),
                       );
                     }
