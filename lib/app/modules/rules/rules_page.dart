@@ -75,7 +75,7 @@ class RulesPageState extends State<RulesPage> {
                               ),
                               tittle: 'Utilizar todos os EPIs',
                               tip: "Quem é vivo sempre se protege",
-                              message: "Os EPIs são itens essenciais para proteger os trabalhadores de diversos riscos no ambiente de trabalho, como lesões, exposição a substâncias perigosas, entre outros. É fundamental que todos os funcionários usem os EPIs adequados para a atividade que estão realizando.",
+                              message: "Os EPIs são itensp essenciais para proteger os trabalhadores de diversos riscos no ambiente de trabalho, como lesões, exposição a substâncias perigosas, entre outros. É fundamental que todos os funcionários usem os EPIs adequados para a atividade que estão realizando.",
                             ),
 
                             RuleLife(
