@@ -111,6 +111,7 @@ class ApprencitesPageState extends State<ApprencitesPage> {
                             ///Carlao
                             ApprenticesCard(
                               name: "Carlos Doliveira",
+                              age: 23,
                               active: false,
                               profileImage: const DecorationImage(
                                 image: AssetImage('assets/images/apprentices_profiles/carlao/profileCarlao.png'),

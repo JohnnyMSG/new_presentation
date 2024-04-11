@@ -8,12 +8,14 @@ import 'package:new_presentation/app/modules/rules/rules_store.dart';
 class RuleLife extends StatelessWidget {
   Widget? icon;
   String? tittle;
+  String? tip;
   String? message;
 
   RuleLife({
     Key? key,
     this.icon,
     this.tittle,
+    this.tip,
     this.message,
   }) : super(key: key);
   final RulesStore store = Modular.get();
@@ -31,27 +33,37 @@ class RuleLife extends StatelessWidget {
                     alignment: Alignment.topCenter,
                     child: Container(
                         width: MediaQuery.of(context).size.width * 0.8,
-                        height: 250,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: ColorsD.dark_green3,
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.only(right: 10, left: 10, top: 130),
-                          child: Row(
+                          padding: const EdgeInsets.only(right: 10, left: 10, top: 100),
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.all(15),
+                                padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
                                 child: Text(
-                                  message!.toUpperCase(),
+                                  tip!,
                                   style: const TextStyle(
                                     color: ColorsD.white,
-                                    fontSize: 40,
+                                    fontSize: 25,
                                   ),
                                 ),
-                              )
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 15, left: 15, right: 15),
+                                child: Text(
+                                  message!,
+                                  style: const TextStyle(
+                                    color: ColorsD.white,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ),
+
                             ],
                           ),
                         )),

@@ -80,7 +80,7 @@ class TimelinePageState extends State<TimelinePage> {
                                 color: ColorsD.black,
                               ),
                               Time(
-                                tittle: "Testador",
+                                tittle: "Tester",
                                 imagesPaths: const [
                                   'assets/images/cmaa/timeline/tester/5.png',
                                   'assets/images/cmaa/timeline/tester/6.png',
@@ -125,6 +125,12 @@ class TimelinePageState extends State<TimelinePage> {
                                   'assets/images/cmaa/timeline/programmer/8.png',
                                   'assets/images/cmaa/timeline/programmer/9.png',
                                   'assets/images/cmaa/timeline/programmer/10.png',
+                                  'assets/images/cmaa/timeline/programmer/11.png',
+                                  'assets/images/cmaa/timeline/programmer/12.png',
+                                  'assets/images/cmaa/timeline/programmer/13.png',
+                                  'assets/images/cmaa/timeline/programmer/14.png',
+                                  'assets/images/cmaa/timeline/programmer/15.png',
+                                  'assets/images/cmaa/timeline/programmer/16.png',
                                 ],
                               ),
                               Container(
